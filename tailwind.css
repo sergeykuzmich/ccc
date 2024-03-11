@@ -7,6 +7,146 @@ h1, h2, h3, h4, h5, h6, p, a, li {
     font-weight: 300;
 }
 
+body {
+    @apply dark:bg-black dark:text-white;
+}
+
+a {
+    @apply hover:opacity-80;
+}
+
+strong {
+    @apply font-bold;
+}
+
+.book-a-meet {
+    @apply flex items-center gap-4 sm:gap-8;
+
+    .icon {
+        @apply flex-shrink-0 items-center justify-center w-16 h-16 flex shadow-md p-0 rounded-full bg-black dark:bg-yellow-400 text-white dark:text-black;
+    }
+
+    .label {
+        @apply max-w-[30ch] text-xl text-pretty;
+    }
+}
+
+.section {
+    @apply container mx-auto flex min-h-dvh flex-col;
+}
+
+.section-title {
+    @apply mb-4 text-center text-4xl font-bold uppercase;
+}
+
+.section-description {
+    @apply mx-auto block max-w-[50ch] text-pretty text-xl;
+}
+
+.hero {
+    @apply relative px-4 py-2;
+
+    .heading-container {
+        @apply flex flex-1 items-center justify-center;
+
+        .heading {
+            @apply my-12 text-6xl font-bold leading-tight lg:text-8xl;
+        }
+    }
+
+    .hero-description {
+        @apply mb-8 max-w-[53ch] justify-self-start text-xl lg:w-1/2 dark:text-white text-pretty;
+    }
+
+    .contacts {
+        @apply flex justify-between items-end max-w-[53ch] lg:w-1/2;
+    }
+
+    .about {
+        @apply bg-black dark:bg-yellow-400 dark:text-black text-white lg:absolute right-0 bottom-2 mx-auto mt-12 p-8 md:p-12 lg:py-2 max-w-md shadow-md;
+
+        .details {
+            @apply 2xl:max-h-[800px] lg:max-h-0 transition-[max-height] ease-in-out duration-500 overflow-hidden;
+
+            .profile {
+                @apply flex flex-row items-end justify-between;
+            }
+        }
+
+        .anchor {
+            @apply text-white font-semibold dark:text-black text-center text-lg cursor-pointer;
+        }
+    }
+}
+
+.cnd {
+    @apply items-center justify-center gap-20 px-4 py-24 pt-48;
+
+    .showcase {
+        @apply flex w-full items-center justify-center flex-wrap gap-x-4;
+
+        .case-study {
+            @apply mb-8 w-[400px] cursor-pointer;
+
+            .title {
+                @apply mb-4 text-pretty text-center text-lg font-bold;
+            }
+
+            .content {
+                @apply mx-auto w-auto overflow-hidden relative;
+
+                .overlay {
+                    @apply absolute scale-125 active:scale-100 active:opacity-90 hover:scale-100 bg-black text-white opacity-0 transition-all duration-300 hover:opacity-90 left-0 bottom-0 top-0 right-0 px-6 py-4 text-xs sm:text-sm;
+                }
+            }
+        }
+    }
+}
+
+.mns {
+    @apply items-center justify-center gap-16 px-4 py-24;
+
+    .strategies {
+        @apply flex flex-col gap-x-16 2xl:gap-x-32 gap-y-8 md:grid md:grid-cols-2 lg:grid-cols-3;
+    }
+
+    .card {
+        @apply border border-black dark:border-white overflow-hidden relative cursor-pointer;
+
+        .title {
+            @apply mb-4 text-xl font-bold uppercase;
+        }
+
+        .overlay {
+            @apply text-white absolute top-full left-0 right-0 bottom-0 p-4 bg-black dark:bg-yellow-400 dark:text-black transition-all;
+        }
+    }
+}
+
+.last {
+    @apply mx-auto flex min-h-dvh flex-col items-center justify-center gap-12 pt-24;
+
+    .wrapper {
+        @apply container flex flex-1 flex-col items-center justify-center gap-12 px-4;
+    }
+
+    .sub-heading {
+        @apply flex items-center justify-center px-4;
+    }
+}
+
+.footer {
+    @apply w-full bg-black px-8 text-white lg:px-0 dark:bg-yellow-400 dark:text-black;
+
+    .wrapper {
+        @apply container mx-auto flex flex-col-reverse flex-wrap items-center justify-center gap-16 py-16 sm:flex-row md:gap-8 lg:gap-16;
+
+        .icons {
+            @apply flex flex-1 justify-center gap-16 text-white sm:gap-12 md:justify-end lg:gap-16 dark:text-black;
+        }
+    }
+}
+
 @media (prefers-reduced-motion: no-preference) {
     :has(:target) {
         scroll-behavior: smooth;
